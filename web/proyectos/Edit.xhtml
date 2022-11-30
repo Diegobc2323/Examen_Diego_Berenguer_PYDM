@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditProyectosTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_codProyecto}" for="codProyecto" />
+                    <h:inputText id="codProyecto" value="#{proyectosController.selected.codProyecto}" title="#{bundle.EditProyectosTitle_codProyecto}" required="true" requiredMessage="#{bundle.EditProyectosRequiredMessage_codProyecto}"/>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_ong}" for="ong" />
+                    <h:inputText id="ong" value="#{proyectosController.selected.ong}" title="#{bundle.EditProyectosTitle_ong}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_codigo}" for="codigo" />
+                    <h:inputText id="codigo" value="#{proyectosController.selected.codigo}" title="#{bundle.EditProyectosTitle_codigo}" required="true" requiredMessage="#{bundle.EditProyectosRequiredMessage_codigo}"/>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_parte}" for="parte" />
+                    <h:inputText id="parte" value="#{proyectosController.selected.parte}" title="#{bundle.EditProyectosTitle_parte}" required="true" requiredMessage="#{bundle.EditProyectosRequiredMessage_parte}"/>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_referencia}" for="referencia" />
+                    <h:inputText id="referencia" value="#{proyectosController.selected.referencia}" title="#{bundle.EditProyectosTitle_referencia}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_numProyecto}" for="numProyecto" />
+                    <h:inputText id="numProyecto" value="#{proyectosController.selected.numProyecto}" title="#{bundle.EditProyectosTitle_numProyecto}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_localizacion}" for="localizacion" />
+                    <h:inputText id="localizacion" value="#{proyectosController.selected.localizacion}" title="#{bundle.EditProyectosTitle_localizacion}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_anyo}" for="anyo" />
+                    <h:inputText id="anyo" value="#{proyectosController.selected.anyo}" title="#{bundle.EditProyectosTitle_anyo}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_titulo}" for="titulo" />
+                    <h:inputText id="titulo" value="#{proyectosController.selected.titulo}" title="#{bundle.EditProyectosTitle_titulo}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_descripcion}" for="descripcion" />
+                    <h:inputText id="descripcion" value="#{proyectosController.selected.descripcion}" title="#{bundle.EditProyectosTitle_descripcion}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_regionSdb}" for="regionSdb" />
+                    <h:inputText id="regionSdb" value="#{proyectosController.selected.regionSdb}" title="#{bundle.EditProyectosTitle_regionSdb}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_opd}" for="opd" />
+                    <h:inputText id="opd" value="#{proyectosController.selected.opd}" title="#{bundle.EditProyectosTitle_opd}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_opdContactoMail}" for="opdContactoMail" />
+                    <h:inputText id="opdContactoMail" value="#{proyectosController.selected.opdContactoMail}" title="#{bundle.EditProyectosTitle_opdContactoMail}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_opdContactoTelefono}" for="opdContactoTelefono" />
+                    <h:inputText id="opdContactoTelefono" value="#{proyectosController.selected.opdContactoTelefono}" title="#{bundle.EditProyectosTitle_opdContactoTelefono}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_costoTotal}" for="costoTotal" />
+                    <h:inputText id="costoTotal" value="#{proyectosController.selected.costoTotal}" title="#{bundle.EditProyectosTitle_costoTotal}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_dineroSolicitado}" for="dineroSolicitado" />
+                    <h:inputText id="dineroSolicitado" value="#{proyectosController.selected.dineroSolicitado}" title="#{bundle.EditProyectosTitle_dineroSolicitado}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_aprobado}" for="aprobado" />
+                    <h:inputText id="aprobado" value="#{proyectosController.selected.aprobado}" title="#{bundle.EditProyectosTitle_aprobado}" required="true" requiredMessage="#{bundle.EditProyectosRequiredMessage_aprobado}"/>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_docConcesion}" for="docConcesion" />
+                    <h:inputText id="docConcesion" value="#{proyectosController.selected.docConcesion}" title="#{bundle.EditProyectosTitle_docConcesion}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_fechaConcesion}" for="fechaConcesion" />
+                    <h:inputText id="fechaConcesion" value="#{proyectosController.selected.fechaConcesion}" title="#{bundle.EditProyectosTitle_fechaConcesion}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_dineroConcedido}" for="dineroConcedido" />
+                    <h:inputText id="dineroConcedido" value="#{proyectosController.selected.dineroConcedido}" title="#{bundle.EditProyectosTitle_dineroConcedido}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_cd}" for="cd" />
+                    <h:inputText id="cd" value="#{proyectosController.selected.cd}" title="#{bundle.EditProyectosTitle_cd}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_cdSedeLocal}" for="cdSedeLocal" />
+                    <h:inputText id="cdSedeLocal" value="#{proyectosController.selected.cdSedeLocal}" title="#{bundle.EditProyectosTitle_cdSedeLocal}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_ci}" for="ci" />
+                    <h:inputText id="ci" value="#{proyectosController.selected.ci}" title="#{bundle.EditProyectosTitle_ci}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_ciMs}" for="ciMs" />
+                    <h:inputText id="ciMs" value="#{proyectosController.selected.ciMs}" title="#{bundle.EditProyectosTitle_ciMs}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_ciSocioLocal}" for="ciSocioLocal" />
+                    <h:inputText id="ciSocioLocal" value="#{proyectosController.selected.ciSocioLocal}" title="#{bundle.EditProyectosTitle_ciSocioLocal}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_apoCdMs}" for="apoCdMs" />
+                    <h:inputText id="apoCdMs" value="#{proyectosController.selected.apoCdMs}" title="#{bundle.EditProyectosTitle_apoCdMs}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_duracionReal}" for="duracionReal" />
+                    <h:inputText id="duracionReal" value="#{proyectosController.selected.duracionReal}" title="#{bundle.EditProyectosTitle_duracionReal}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_fechaInicio}" for="fechaInicio" />
+                    <h:inputText id="fechaInicio" value="#{proyectosController.selected.fechaInicio}" title="#{bundle.EditProyectosTitle_fechaInicio}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_fechaFin}" for="fechaFin" />
+                    <h:inputText id="fechaFin" value="#{proyectosController.selected.fechaFin}" title="#{bundle.EditProyectosTitle_fechaFin}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_fechaFinAmpliacion}" for="fechaFinAmpliacion" />
+                    <h:inputText id="fechaFinAmpliacion" value="#{proyectosController.selected.fechaFinAmpliacion}" title="#{bundle.EditProyectosTitle_fechaFinAmpliacion}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_duracionTrasAmpliacion}" for="duracionTrasAmpliacion" />
+                    <h:inputText id="duracionTrasAmpliacion" value="#{proyectosController.selected.duracionTrasAmpliacion}" title="#{bundle.EditProyectosTitle_duracionTrasAmpliacion}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_duracionif}" for="duracionif" />
+                    <h:inputText id="duracionif" value="#{proyectosController.selected.duracionif}" title="#{bundle.EditProyectosTitle_duracionif}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_fechaMaximaif}" for="fechaMaximaif" />
+                    <h:inputText id="fechaMaximaif" value="#{proyectosController.selected.fechaMaximaif}" title="#{bundle.EditProyectosTitle_fechaMaximaif}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_ingles}" for="ingles" />
+                    <h:inputText id="ingles" value="#{proyectosController.selected.ingles}" title="#{bundle.EditProyectosTitle_ingles}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_fechaCierre}" for="fechaCierre" />
+                    <h:inputText id="fechaCierre" value="#{proyectosController.selected.fechaCierre}" title="#{bundle.EditProyectosTitle_fechaCierre}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_cerrado}" for="cerrado" />
+                    <h:inputText id="cerrado" value="#{proyectosController.selected.cerrado}" title="#{bundle.EditProyectosTitle_cerrado}" required="true" requiredMessage="#{bundle.EditProyectosRequiredMessage_cerrado}"/>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_numBeneficiarios}" for="numBeneficiarios" />
+                    <h:inputText id="numBeneficiarios" value="#{proyectosController.selected.numBeneficiarios}" title="#{bundle.EditProyectosTitle_numBeneficiarios}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_numBeneficiariosMujeres}" for="numBeneficiariosMujeres" />
+                    <h:inputText id="numBeneficiariosMujeres" value="#{proyectosController.selected.numBeneficiariosMujeres}" title="#{bundle.EditProyectosTitle_numBeneficiariosMujeres}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_numBeneficiariosHombres}" for="numBeneficiariosHombres" />
+                    <h:inputText id="numBeneficiariosHombres" value="#{proyectosController.selected.numBeneficiariosHombres}" title="#{bundle.EditProyectosTitle_numBeneficiariosHombres}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_descripcionBeneficiarios}" for="descripcionBeneficiarios" />
+                    <h:inputText id="descripcionBeneficiarios" value="#{proyectosController.selected.descripcionBeneficiarios}" title="#{bundle.EditProyectosTitle_descripcionBeneficiarios}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_numBeneficiarioInd}" for="numBeneficiarioInd" />
+                    <h:inputText id="numBeneficiarioInd" value="#{proyectosController.selected.numBeneficiarioInd}" title="#{bundle.EditProyectosTitle_numBeneficiarioInd}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_numEntidadesBeneficiarias}" for="numEntidadesBeneficiarias" />
+                    <h:inputText id="numEntidadesBeneficiarias" value="#{proyectosController.selected.numEntidadesBeneficiarias}" title="#{bundle.EditProyectosTitle_numEntidadesBeneficiarias}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_comentarios}" for="comentarios" />
+                    <h:inputTextarea rows="4" cols="30" id="comentarios" value="#{proyectosController.selected.comentarios}" title="#{bundle.EditProyectosTitle_comentarios}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_justificacion}" for="justificacion" />
+                    <h:inputTextarea rows="4" cols="30" id="justificacion" value="#{proyectosController.selected.justificacion}" title="#{bundle.EditProyectosTitle_justificacion}" />
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_informeDonante}" for="informeDonante" />
+                    <h:inputText id="informeDonante" value="#{proyectosController.selected.informeDonante}" title="#{bundle.EditProyectosTitle_informeDonante}" required="true" requiredMessage="#{bundle.EditProyectosRequiredMessage_informeDonante}"/>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_extinguido}" for="extinguido" />
+                    <h:inputText id="extinguido" value="#{proyectosController.selected.extinguido}" title="#{bundle.EditProyectosTitle_extinguido}" required="true" requiredMessage="#{bundle.EditProyectosRequiredMessage_extinguido}"/>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_responsableLegal}" for="responsableLegal" />
+                    <h:selectOneMenu id="responsableLegal" value="#{proyectosController.selected.responsableLegal}" title="#{bundle.EditProyectosTitle_responsableLegal}" >
+                        <f:selectItems value="#{responsablesController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_socioLocal}" for="socioLocal" />
+                    <h:selectOneMenu id="socioLocal" value="#{proyectosController.selected.socioLocal}" title="#{bundle.EditProyectosTitle_socioLocal}" >
+                        <f:selectItems value="#{socioslocalesController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_inspectoria}" for="inspectoria" />
+                    <h:selectOneMenu id="inspectoria" value="#{proyectosController.selected.inspectoria}" title="#{bundle.EditProyectosTitle_inspectoria}" >
+                        <f:selectItems value="#{inspectoriasController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_responsableLocal}" for="responsableLocal" />
+                    <h:selectOneMenu id="responsableLocal" value="#{proyectosController.selected.responsableLocal}" title="#{bundle.EditProyectosTitle_responsableLocal}" >
+                        <f:selectItems value="#{responsablesController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_pais}" for="pais" />
+                    <h:selectOneMenu id="pais" value="#{proyectosController.selected.pais}" title="#{bundle.EditProyectosTitle_pais}" >
+                        <f:selectItems value="#{paisesController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_sectorcad}" for="sectorcad" />
+                    <h:selectOneMenu id="sectorcad" value="#{proyectosController.selected.sectorcad}" title="#{bundle.EditProyectosTitle_sectorcad}" >
+                        <f:selectItems value="#{cadsController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_status}" for="status" />
+                    <h:selectOneMenu id="status" value="#{proyectosController.selected.status}" title="#{bundle.EditProyectosTitle_status}" >
+                        <f:selectItems value="#{statusController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_sede}" for="sede" />
+                    <h:selectOneMenu id="sede" value="#{proyectosController.selected.sede}" title="#{bundle.EditProyectosTitle_sede}" >
+                        <f:selectItems value="#{sedesController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_instrumento}" for="instrumento" />
+                    <h:selectOneMenu id="instrumento" value="#{proyectosController.selected.instrumento}" title="#{bundle.EditProyectosTitle_instrumento}" >
+                        <f:selectItems value="#{instrumentosController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_target}" for="target" />
+                    <h:selectOneMenu id="target" value="#{proyectosController.selected.target}" title="#{bundle.EditProyectosTitle_target}" >
+                        <f:selectItems value="#{poblacionesController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_sectorjyd}" for="sectorjyd" />
+                    <h:selectOneMenu id="sectorjyd" value="#{proyectosController.selected.sectorjyd}" title="#{bundle.EditProyectosTitle_sectorjyd}" >
+                        <f:selectItems value="#{sectorespropiosController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_subsectorjyd}" for="subsectorjyd" />
+                    <h:selectOneMenu id="subsectorjyd" value="#{proyectosController.selected.subsectorjyd}" title="#{bundle.EditProyectosTitle_subsectorjyd}" >
+                        <f:selectItems value="#{subsectorespropiosController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_subsectorms}" for="subsectorms" />
+                    <h:selectOneMenu id="subsectorms" value="#{proyectosController.selected.subsectorms}" title="#{bundle.EditProyectosTitle_subsectorms}" >
+                        <f:selectItems value="#{subsectoresController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_categoria}" for="categoria" />
+                    <h:selectOneMenu id="categoria" value="#{proyectosController.selected.categoria}" title="#{bundle.EditProyectosTitle_categoria}" >
+                        <f:selectItems value="#{categoriasController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_subcategoria}" for="subcategoria" />
+                    <h:selectOneMenu id="subcategoria" value="#{proyectosController.selected.subcategoria}" title="#{bundle.EditProyectosTitle_subcategoria}" >
+                        <f:selectItems value="#{subcategoriasController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_tipoEntidad}" for="tipoEntidad" />
+                    <h:selectOneMenu id="tipoEntidad" value="#{proyectosController.selected.tipoEntidad}" title="#{bundle.EditProyectosTitle_tipoEntidad}" >
+                        <f:selectItems value="#{tiposentidadesController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_entidad}" for="entidad" />
+                    <h:selectOneMenu id="entidad" value="#{proyectosController.selected.entidad}" title="#{bundle.EditProyectosTitle_entidad}" >
+                        <f:selectItems value="#{entidadesController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_sectorms}" for="sectorms" />
+                    <h:selectOneMenu id="sectorms" value="#{proyectosController.selected.sectorms}" title="#{bundle.EditProyectosTitle_sectorms}" >
+                        <f:selectItems value="#{sectoresController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_tecFor}" for="tecFor" />
+                    <h:selectOneMenu id="tecFor" value="#{proyectosController.selected.tecFor}" title="#{bundle.EditProyectosTitle_tecFor}" >
+                        <f:selectItems value="#{tecnicosController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_opdContactoNombre}" for="opdContactoNombre" />
+                    <h:selectOneMenu id="opdContactoNombre" value="#{proyectosController.selected.opdContactoNombre}" title="#{bundle.EditProyectosTitle_opdContactoNombre}" >
+                        <f:selectItems value="#{responsablesController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_tecSeg}" for="tecSeg" />
+                    <h:selectOneMenu id="tecSeg" value="#{proyectosController.selected.tecSeg}" title="#{bundle.EditProyectosTitle_tecSeg}" >
+                        <f:selectItems value="#{tecnicosController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditProyectosLabel_tipoProyecto}" for="tipoProyecto" />
+                    <h:selectOneMenu id="tipoProyecto" value="#{proyectosController.selected.tipoProyecto}" title="#{bundle.EditProyectosTitle_tipoProyecto}" >
+                        <f:selectItems value="#{tiposproyectoController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{proyectosController.update}" value="#{bundle.EditProyectosSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditProyectosViewLink}"/>
+                <br />
+                <h:commandLink action="#{proyectosController.prepareList}" value="#{bundle.EditProyectosShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditProyectosIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
